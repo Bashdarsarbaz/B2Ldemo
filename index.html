@@ -10,11 +10,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400..700&display=swap" rel="stylesheet">
     <style>
-        /* ... (keep other existing styles) ... */
         body {
             font-family: "Noto Naskh Arabic", serif;
             overflow-x: hidden;
-            padding-right: 0; /* Add this to ensure no extra padding */
+            padding-right: 0; 
         }
         .sidebar {
             width: 250px;
@@ -51,7 +50,6 @@
             right: 260px;
         }
         
-        /* Responsive styles */
         @media (max-width: 768px) {
             .sidebar {
                 width: 100%;
@@ -75,13 +73,11 @@
     </button>
 
     <div class="d-flex">
-        <!-- Main Content -->
         <div class="main-content" id="mainContent">
             <h2 class=" text-center">گەڕانەوە بۆ فێربوون</h2>
             <br>
             <br>
             <div class="row mb-4 justify-content-center">
-                <!-- Responsive columns for cards -->
                 <div class="col-12 col-sm-6 col-md-4 col-lg-2 mb-3">
                     <div class="card bg-primary text-white text-center">
                         <div class="card-body">
@@ -123,7 +119,6 @@
                     </div>
                 </div>
             </div>
-            <!-- Responsive table -->
             <div class="table-responsive">
                 <table class="table table-bordered">
                     <thead>
@@ -207,22 +202,21 @@
         </div>
     </div>
 
-    <!-- Sidebar -->
     <div class="sidebar" id="sidebar">
         <div class="p-4">
-            <h4 class="text-center mb-4">به‌رنامه‌ به‌دواداچوون</h4>
+            <h4 class="text-center mb-4">ناوی بەکارهێنەر</h4>
             <ul class="nav flex-column">
                 <li class="nav-item">
                     <a class="nav-link active" href="#"><i class="bi bi-house"></i> سه‌ره‌کی</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="bi bi-person"></i> تاقیكردنه‌وه‌</a>
+                    <a class="nav-link" href="#"><i class="bi bi-person"></i> ساڵەکانی تر</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="bi bi-bar-chart"></i> ئامار</a>
+                    <a class="nav-link" href="#"><i class="bi bi-bar-chart"></i> داشبۆرد</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="bi bi-envelope"></i> پەیوەندیدان</a>
+                    <a class="nav-link" href="#"><i class="bi bi-envelope"></i>ئاگادارکردنەوە</a>
                 </li>
             </ul>
         </div>
@@ -238,7 +232,6 @@
             mainContent.classList.toggle('shrink');
             toggleBtn.classList.toggle('moved');
             
-            // Adjust body padding when sidebar is opened/closed
             if (sidebar.classList.contains('open')) {
                 document.body.style.paddingRight = '250px';
             } else {
@@ -246,7 +239,6 @@
             }
         });
 
-        // Close sidebar when clicking outside of it
         document.addEventListener('click', function(event) {
             if (!sidebar.contains(event.target) && !toggleBtn.contains(event.target) && sidebar.classList.contains('open')) {
                 sidebar.classList.remove('open');
